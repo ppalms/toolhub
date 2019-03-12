@@ -23,7 +23,6 @@ urlpatterns = [
         RedirectView.as_view(permanent=False, pattern_name="tools:detail"),
         name="tool_short",
     ),  # redirect /t/#/ to /tools/#/
-    path("<path:url>", views.flatpage),
 ]
 
 handler400 = toolhub_views.BadRequest.as_view()
@@ -48,3 +47,6 @@ if settings.DEBUG:
     import debug_toolbar
 
     urlpatterns += [path("__debug__/", include(debug_toolbar.urls))]
+
+# Catch all urls
+urlpatterns += [path("<path:url>", views.flatpage)]
