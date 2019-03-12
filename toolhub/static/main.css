@@ -8,3 +8,17 @@ body, #main-wrapper {
 .card-text:empty {
     display: none;
 }
+
+.card-tool-img {
+    max-height: 120px;
+    overflow: hidden;
+}
+
+.card-tool-img img {
+    width: 100%;
+    height: auto;
+}
+
+.content img {
+    max-width: 100%;
+}

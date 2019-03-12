@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "qr_code",
     "memoize",
+    "imagekit",
     "toolhub",
     "toolhub_auth.apps.ToolhubAuthConfig",
     "tools.apps.ToolsConfig",
@@ -163,3 +164,5 @@ MARKDOWNX_MARKDOWN_EXTENSIONS = [
     "markdown.extensions.toc",
     "markdown.extensions.wikilinks",
 ]
+
+MARKDOWNX_UPLOAD_CONTENT_TYPES = ("image/jpeg", "image/png")
